@@ -1,11 +1,58 @@
 .wrapper {
-	/* text-align: center; */
+	position: relative;
 	max-width: 1280px;
-	min-width: 720px;
-	margin: 20px auto;
-	width: 50%;
+	max-height: 720px;
+	margin: auto;
+	border: 4px solid red;
 }
 
 .body {
 	background-color: lightslategray;
+}
+
+.dialog-wrapper {
+	background-color: black;
+	text-align: center;
+	color: #caa560;
+	border: 2px solid #caa560;
+	padding: 15px 0px 15px 0px;
+	left: 35%;
+	right: 35%;
+	bottom: 50px;
+	margin: auto;
+	position: absolute;
+	z-index: 9999;
+	visibility: hidden;
+}
+
+/* .dialog {
+	position: absolute;
+	width: 480px;
+	z-index: 9999;
+	border-radius: 10px;
+	background-color: #7c7d7e;
+	display: inline-block;
+} */
+
+.dialog-header {
+	background-color: #6d84b4;
+	padding: 10px;
+	margin: 10px 10px 0px 10px;
+}
+
+.dialog-body {
+	background-color: white;
+	padding: 10px;
+	margin: 0px 10px 0px 10px;
+}
+
+.dialog-footer {
+	background-color: #f2f2f2;
+	text-align: right;
+	padding: 10px;
+	margin: 0px 10px 10px 10px;
+}
+
+.dialog-footer button {
+	background-color: #6d84b4;
 }
