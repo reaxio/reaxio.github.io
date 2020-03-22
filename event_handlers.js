@@ -14,11 +14,12 @@ image.addEventListener("click", (e) => {
     nextStep(e);
 });
 
+
 function nextStep(e) {
     let currentCount = aCounter.next();
     switch(currentCount) {
         case 0:
-            e.target.src = "assets/jiub.png";
+            replaceImage(e.target, "assets/jiub.png");
             break;
         case 1:
             showDialog();
@@ -27,6 +28,23 @@ function nextStep(e) {
             hideDialog();
             break;
     }
+}
+
+function replaceImage(oldImage, newImagePath) {
+    let newImage = new Image();
+    newImage.id = "menu-image";
+    newImage.src = newImagePath;   
+    newImage.onload = function() {
+        console.log(`image ${newImagePath} finished loading`);
+        newImage.addEventListener("click", (e) => {
+            nextStep(e);
+        });
+    };
+    console.log("starting loading image " + newImagePath);
+    let parent = oldImage.parentNode;
+    parent.insertBefore(newImage, oldImage);
+    parent.removeChild(oldImage);
+    
 }
 
 function showDialog() {
