@@ -10,14 +10,16 @@
 	background-color: lightslategray;
 }
 
-.dialog-wrapper {
+.output {
 	background-color: black;
 	text-align: center;
 	color: #caa560;
 	border: 2px solid #caa560;
-	padding: 15px 0px 15px 0px;
 	left: 35%;
 	right: 35%;
+}
+
+.dialog-wrapper {	
 	bottom: 50px;
 	margin: auto;
 	position: absolute;
@@ -25,14 +27,12 @@
 	visibility: hidden;
 }
 
-/* .dialog {
+.dialog {
 	position: absolute;
-	width: 480px;
+	top: 45%;
 	z-index: 9999;
-	border-radius: 10px;
-	background-color: #7c7d7e;
 	display: inline-block;
-} */
+}
 
 .dialog-header {
 	background-color: #6d84b4;

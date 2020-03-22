@@ -17,6 +17,7 @@ image.addEventListener("click", (e) => {
 
 function nextStep(e) {
     let currentCount = aCounter.next();
+    console.log("step number " + currentCount);
     switch(currentCount) {
         case 0:
             replaceImage(e.target, "assets/jiub.png");
@@ -26,6 +27,7 @@ function nextStep(e) {
             break;
         case 2:
             hideDialog();
+            askName();
             break;
     }
 }
@@ -60,15 +62,21 @@ function hideDialog() {
     dialog.style.visibility = "hidden";
 }
 
-function customDialog() {
+function askName() {
+    let wrapper = document.querySelector(".wrapper");
+    let customDialog = document.createElement("div");
+    customDialog.className = "dialog output";
+    customDialog.innerHTML = customDialogg();
+    wrapper.appendChild(customDialog);
+}
+
+function customDialogg() {
     let dialog = 
-    `<div class="dialog">
-     <div class="dialog-header"></div>
+    `<div class="dialog-header"></div>
      <div class="dialog-body"></div>
      <div class="dialog-footer">
           <button>click</button>
      </div>
-    </div>
     `;
     return dialog;
 }
