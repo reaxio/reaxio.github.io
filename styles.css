@@ -14,9 +14,18 @@
 	background-color: black;
 	text-align: center;
 	color: #caa560;
-	border: 2px solid #caa560;
 	left: 35%;
 	right: 35%;
+}
+
+.input {	
+	background-color: black;
+	color: #caa560;
+	width: 100%;
+}
+
+.sexy-border {
+	border: 2px solid #caa560;
 }
 
 .dialog-wrapper {	
@@ -35,24 +44,21 @@
 }
 
 .dialog-header {
-	background-color: #6d84b4;
-	padding: 10px;
-	margin: 10px 10px 0px 10px;
+	padding-left: 15px;
+	text-align: left;
 }
 
 .dialog-body {
-	background-color: white;
-	padding: 10px;
-	margin: 0px 10px 0px 10px;
+	padding: 0px 25px 0px 20px;
 }
 
 .dialog-footer {
-	background-color: #f2f2f2;
 	text-align: right;
 	padding: 10px;
 	margin: 0px 10px 10px 10px;
 }
 
 .dialog-footer button {
-	background-color: #6d84b4;
+	background-color: black;
+	color: #caa560;
 }

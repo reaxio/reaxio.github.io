@@ -53,7 +53,6 @@ function showDialog() {
     let dialog = document.querySelector(".dialog-wrapper");    
     dialog.innerHTML = "<p>Stand up, there you go. You were dreaming. What's your name?</p>";
     dialog.style.visibility = "visible";
-    console.log("created dialog");
 }
 
 function hideDialog() {
@@ -65,17 +64,21 @@ function hideDialog() {
 function askName() {
     let wrapper = document.querySelector(".wrapper");
     let customDialog = document.createElement("div");
-    customDialog.className = "dialog output";
+    customDialog.className = "dialog output sexy-border";
     customDialog.innerHTML = customDialogg();
     wrapper.appendChild(customDialog);
 }
 
 function customDialogg() {
     let dialog = 
-    `<div class="dialog-header"></div>
-     <div class="dialog-body"></div>
+    `<div class="dialog-header">
+        <p>Name</p>
+    </div>
+    <div class="dialog-body">
+        <input type="text" class="input sexy-border">
+    </div>
      <div class="dialog-footer">
-          <button>click</button>
+          <button class="sexy-border">OK</button>
      </div>
     `;
     return dialog;
