@@ -62,3 +62,8 @@
 	background-color: black;
 	color: #caa560;
 }
+
+.dialog-footer button:disabled {
+	color: grey;
+	border: 2px solid grey;
+}
