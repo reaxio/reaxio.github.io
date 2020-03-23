@@ -9,15 +9,18 @@ const counter = () => {
 
 let aCounter = counter();
 
+let dialogIsActive = false;
 let playerName;
 
 const image = document.querySelector("#menu-image");
-image.addEventListener("click", (e) => {
+image.onclick = function(e) {
     nextStep(e);
-});
-
+}
 
 function nextStep(e) {
+    if (dialogIsActive) {
+        return;
+    }
     let currentCount = aCounter.next();
     console.log("step number " + currentCount);
     switch(currentCount) {
@@ -36,7 +39,11 @@ function nextStep(e) {
             break;
         case 4:
             hideDialog();
+            replaceImage(e.target, "assets/guard_coming.png");
             showDialog("Quiet, here comes the guard.");
+            break;
+        case 5:
+            hideDialog();
             break;
     }
 }
@@ -71,6 +78,7 @@ function hideDialog() {
 }
 
 function askName() {
+    dialogIsActive = true;
     let wrapper = document.querySelector(".wrapper");
     let customDialog = document.createElement("div");
     customDialog.className = "dialog output sexy-border";
@@ -90,7 +98,8 @@ function askName() {
         playerName = nameInput.value;
         console.log("player name is " + playerName);
         wrapper.removeChild(customDialog);
-        nextStep();
+        dialogIsActive = false;
+        image.click();
     }
 
 }
