@@ -28,19 +28,19 @@ function nextStep(e) {
             replaceImage(e.target, "assets/jiub.png");
             break;
         case 1:
-            showDialog("Stand up, there you go. You were dreaming. What's your name?");
+            showDialog(text.greeting);
             break;
         case 2:
             hideDialog();
             askName();
             break;
         case 3:
-            showDialog("Well, not even last night's storm could wake you. I heard them say we've reached Morrowind. I'm sure they'll let us go.");
+            showDialog(text.storm);
             break;
         case 4:
             hideDialog();
             replaceImage(e.target, "assets/guard_coming.png");
-            showDialog("Quiet, here comes the guard.");
+            showDialog(text.guardComes);
             break;
         case 5:
             hideDialog();
